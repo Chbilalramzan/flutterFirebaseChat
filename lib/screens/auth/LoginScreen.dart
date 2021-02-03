@@ -1,10 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_chat/helper/SharedPrefrenceHelper.dart';
 import 'package:flutter_firebase_chat/screens/auth/SignUpScreen.dart';
+import 'package:flutter_firebase_chat/screens/chat/ChatScreen.dart';
+import 'package:flutter_firebase_chat/services/AuthService.dart';
 import 'package:flutter_firebase_chat/utils/Constants.dart';
 import 'package:flutter_firebase_chat/widgets/Loading.dart';
+import 'package:flutter_firebase_chat/widgets/custom_button.dart';
+import 'package:flutter_firebase_chat/widgets/custom_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
   final Function toggleView;
@@ -37,17 +42,7 @@ class LoginScreenState extends State<LoginScreen> {
               emailEditingController.text, passwordEditingController.text)
           .then((result) async {
         if (result != null) {
-          QuerySnapshot userInfoSnapshot =
-              await FireStoreMethods().getUserInfo(emailEditingController.text);
-
           SharedPrefrencersHelper.saveUserLoggedInSharedPreference(true);
-
-          SharedPrefrencersHelper.saveUserFullNameSharedPreference(
-              userInfoSnapshot.docs[0].data()['fullName']);
-          SharedPrefrencersHelper.saveUserNameSharedPreference(
-              userInfoSnapshot.docs[0].data()["userName"]);
-          SharedPrefrencersHelper.saveUserEmailSharedPreference(
-              userInfoSnapshot.docs[0].data()["userEmail"]);
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => ChatScreen()));
         } else {
