@@ -1,6 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_chat/helper/SharedPrefrenceHelper.dart';
+import 'package:flutter_firebase_chat/screens/auth/LoginScreen.dart';
+import 'package:flutter_firebase_chat/services/AuthService.dart';
+import 'package:flutter_firebase_chat/utils/Constants.dart';
+import 'package:flutter_firebase_chat/widgets/Loading.dart';
+import 'package:flutter_firebase_chat/widgets/custom_button.dart';
+import 'package:flutter_firebase_chat/widgets/custom_textfield.dart';
 
 class SignUpScreen extends StatefulWidget {
   final Function toggleView;
@@ -13,7 +19,6 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final AuthService _authService = AuthService();
-  final FireStoreMethods fireStoreMethods = new FireStoreMethods();
   final formKey = GlobalKey<FormState>();
   final _scaffoldKey = new GlobalKey<ScaffoldState>();
 
