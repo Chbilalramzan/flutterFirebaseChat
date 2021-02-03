@@ -15,27 +15,104 @@
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
-**/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
-.flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
 /build/
+.flutter-plugins-dependencies
 
-# Web related
-lib/generated_plugin_registrant.dart
+# Android related
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
 
-# Symbolication related
-app.*.symbols
+# iOS/XCode related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/profile
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
 
-# Obfuscation related
-app.*.map.json
+# Exceptions to above rules.
+!**/ios/**/default.mode1v3
+!**/ios/**/default.mode2v3
+!**/ios/**/default.pbxuser
+!**/ios/**/default.perspectivev3
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+android/app/release/output.json
+.gradle/6.0.1/gc.properties
+.gradle/6.0.1/executionHistory/executionHistory.bin
+.gradle/6.0.1/executionHistory/executionHistory.lock
+.gradle/6.0.1/fileChanges/last-build.bin
+.gradle/6.0.1/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/cache.properties
+.gradle/vcs-1/gc.properties
+android/.idea/gradle.xml
+android/.idea/modules.xml
+android/.idea/workspace.xml
+android/.idea/caches/build_file_checksums.ser
+android/app/release/htylol_app.apk
+android/.idea/gradle.xml
+android/.idea/modules.xml
+android/.idea/workspace.xml
+android/.idea/caches/build_file_checksums.ser
+android/.idea/gradle.xml
+android/.idea/modules.xml
+android/.idea/workspace.xml
+android/.idea/caches/build_file_checksums.ser
+android/.idea/libraries/Gradle__com_google_android_gms_play_services_clearcut_16_0_0_aar.xml
+android/.idea/libraries/Gradle__com_google_android_gms_play_services_phenotype_16_0_0_aar.xml
+android/.idea/libraries/Gradle__com_google_firebase_firebase_abt_17_1_1_aar.xml
+android/.idea/libraries/Gradle__com_google_firebase_firebase_config_17_0_0_aar.xml
+android/.idea/libraries/Gradle__com_google_firebase_firebase_perf_17_0_0_aar.xml
+android/.idea/caches/build_file_checksums.ser
+android/.idea/libraries/Gradle__com_google_android_gms_play_services_clearcut_16_0_0_aar.xml
+android/.idea/libraries/Gradle__com_google_android_gms_play_services_phenotype_16_0_0_aar.xml
+android/.idea/libraries/Gradle__com_google_firebase_firebase_abt_17_1_1_aar.xml
+android/.idea/libraries/Gradle__com_google_firebase_firebase_config_17_0_0_aar.xml
+android/.idea/libraries/Gradle__com_google_firebase_firebase_perf_17_0_0_aar.xml
+
+# Visual studio code
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+*.code-workspace
+
+key.jks
+ios/Podfile
+android/app/src/main/kotlin/com/example/heylol_flutter
+ios/Podfile.lock
+pubspec.lock
+cloud_functions/functions/lib/*
+.vscode/settings.json
+.metadata
+ios/Podfile.lock
